@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/SduongPlanD/zillow-feci/issues"
   },
-  "homepage": "https://github.com/SduongPlanD/zillow-feci#readme"
+  "homepage": "https://github.com/SduongPlanD/zillow-feci#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "path": "^0.12.7",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
 }
