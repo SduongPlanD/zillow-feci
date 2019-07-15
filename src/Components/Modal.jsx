@@ -5,7 +5,12 @@ class Modal extends React.Component {
     if (!this.props.modalState) {
       return null;
     }
-    return <div>Show Modal</div>;
+    return (
+      <div>
+        <h2>Show Modal</h2>
+        <button onClick={this.props.closeModal}>Close</button>
+      </div>
+    )
   }
 }
 

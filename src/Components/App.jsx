@@ -8,19 +8,24 @@ class App extends React.Component {
     this.state = {
       show: false
     }
-    this.openModal = this.openModal.bind(this)
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   openModal(e) {
     e.preventDefault();
     this.setState({ show: true });
-    console.log(this.state);
+  }
+
+  closeModal(e) {
+    e.preventDefault();
+    this.setState({ show: false });
   }
 
   render() {
     return (
       <div>
-        <PhotoGallery openModal={this.openModal} modalState={this.state.show}></PhotoGallery>
+        <PhotoGallery openModal={this.openModal} closeModal={this.closeModal} modalState={this.state.show}></PhotoGallery>
       </div>
     )
   }
