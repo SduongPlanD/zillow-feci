@@ -3,13 +3,18 @@ import React from 'react';
 
 import App from './Components/App.jsx';
 
-function component() {
-  const element = document.createElement('div');
+const component = (type, id) => {
+  const element = document.createElement(type);
+  element.id = id;
+  return element
+}
 
-  element.id = 'app';
-
+const script = () => {
+  const element = document.createElement('script');
+  element.src = "https://kit.fontawesome.com/2db4db150c.js"
   return element;
 }
 
-document.body.appendChild(component());
+document.head.appendChild(script());
+document.body.appendChild(component('div', 'app'));
 ReactDOM.render(<App />, document.getElementById('app'));

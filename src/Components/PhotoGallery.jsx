@@ -12,7 +12,7 @@ class PhotoGallery extends React.Component {
       <div>
         <h1>Photos2</h1>
         <img src='https://loremflickr.com/320/240/house' onClick={this.props.openModal}></img>
-        <Modal modalState={this.props.modalState} closeModal={this.props.closeModal}></Modal>
+        <Modal modalState={this.props.modalState} closeModal={this.props.closeModal} increase={this.props.increase} decrease={this.props.decrease}></Modal>
       </div>
     )
   }
