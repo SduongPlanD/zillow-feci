@@ -2,6 +2,7 @@ import React from 'react';
 import PhotoGallery from './PhotoGallery.jsx';
 import Dog from '../../images/dog.jpg';
 import Hen from '../../images/hen.svg';
+import Modal from './Modal.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends React.Component {
       ],
       show: false
     }
+
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.decrease = this.decrease.bind(this);
@@ -31,16 +33,21 @@ class App extends React.Component {
   }
   decrease() {
     this.setState({ position: this.state.position -= 1 })
-    console.log('hi')
   }
   increase() {
     this.setState({ position: this.state.position += 1 })
-    console.log('hifrom the right')
   }
+
   render() {
+    const modal = this.state.show ? (
+      <Modal closeModal={this.closeModal} modalState={this.state} increase={this.increase} decrease={this.decrease}>
+      </Modal>
+    ) : null;
+
     return (
       <div>
-        <PhotoGallery openModal={this.openModal} closeModal={this.closeModal} modalState={this.state} increase={this.increase} decrease={this.decrease}></PhotoGallery>
+        <PhotoGallery openModal={this.openModal}></PhotoGallery>
+        {modal}
       </div>
     )
   }

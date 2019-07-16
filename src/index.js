@@ -17,4 +17,6 @@ const script = () => {
 
 document.head.appendChild(script());
 document.body.appendChild(component('div', 'app'));
+document.body.appendChild(component('div', 'modal-root'));
+
 ReactDOM.render(<App />, document.getElementById('app'));
