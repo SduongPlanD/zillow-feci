@@ -32,10 +32,23 @@ class App extends React.Component {
     this.setState({ show: false });
   }
   decrease() {
-    this.setState({ position: this.state.position -= 1 })
+    let currentPosition = this.state.position;
+    if (currentPosition === 0) {
+      currentPosition = this.state.photos.length - 1;
+    } else {
+      currentPosition--;
+    }
+    this.setState({ position: currentPosition });
   }
+
   increase() {
-    this.setState({ position: this.state.position += 1 })
+    let currentPosition = this.state.position;
+    if (currentPosition === this.state.photos.length - 1) {
+      currentPosition = 0;
+    } else {
+      currentPosition++;
+    }
+    this.setState({ position: currentPosition });
   }
 
   render() {
