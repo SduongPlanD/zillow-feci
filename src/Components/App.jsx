@@ -1,7 +1,5 @@
 import React from 'react';
 import PhotoGallery from './PhotoGallery.jsx';
-import Dog from '../../images/dog.jpg';
-import Hen from '../../images/hen.svg';
 import Modal from './Modal.jsx';
 
 class App extends React.Component {
@@ -10,8 +8,9 @@ class App extends React.Component {
     this.state = {
       position: 0,
       photos: [
-        { url: <img src={Dog}></img>, caption: 'This is my dog' },
-        { url: <img src={Hen}></img>, caption: 'This is my chicken' }
+        { url: 'https://photochews.s3.us-east-2.amazonaws.com/food1.jpg', caption: 'This is my cake' },
+        { url: 'https://photochews.s3.us-east-2.amazonaws.com/food10.jpg', caption: 'This is my sushi' },
+        { url: 'https://photochews.s3.us-east-2.amazonaws.com/food14.jpg', caption: 'This is my ice cream' }
       ],
       show: false
     }

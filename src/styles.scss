@@ -36,9 +36,21 @@ img {
   justify-content: center
 }
 
+.photoPosition {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 5px;
+}
 .content {
   display: flex;
   width: 400px;
   height: 300px;
   justify-content: center;
+}
+
+.thumbnail {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
 }
