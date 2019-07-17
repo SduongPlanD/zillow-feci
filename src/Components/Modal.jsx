@@ -15,9 +15,11 @@ class Modal extends React.Component {
         <h2>Modal Content</h2>
         <div className="contentCont">
           <ModalLeft position={this.props.modalState.position} decrease={this.props.decrease}></ModalLeft>
-          <div class="content">{this.props.modalState.photos[this.props.modalState.position]}</div>
+          <div class="content">{this.props.modalState.photos[this.props.modalState.position]['url']}</div>
           <ModalRight position={this.props.modalState.position} increase={this.props.increase}></ModalRight>
         </div>
+        {/* caption */}
+        <div>{this.props.modalState.photos[this.props.modalState.position]['caption']}</div>
         <button onClick={this.props.closeModal}>Close</button>
       </div>,
       document.getElementById('modal-root')

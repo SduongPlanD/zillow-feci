@@ -10,8 +10,8 @@ class App extends React.Component {
     this.state = {
       position: 0,
       photos: [
-        <img src={Dog}></img>,
-        <img src={Hen}></img>,
+        { url: <img src={Dog}></img>, caption: 'This is my dog' },
+        { url: <img src={Hen}></img>, caption: 'This is my chicken' }
       ],
       show: false
     }
