@@ -12,10 +12,10 @@ class Modal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       <div className="modal">
-        <h2>Modal Content</h2>
+        <h2>Photo {this.props.modalState.position + 1} of {this.props.modalState.photos.length}.</h2>
         <div className="contentCont">
           <ModalLeft position={this.props.modalState.position} decrease={this.props.decrease}></ModalLeft>
-          <div class="content">{this.props.modalState.photos[this.props.modalState.position]['url']}</div>
+          <div className="content">{this.props.modalState.photos[this.props.modalState.position]['url']}</div>
           <ModalRight position={this.props.modalState.position} increase={this.props.increase}></ModalRight>
         </div>
         {/* caption */}
