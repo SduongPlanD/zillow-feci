@@ -17,11 +17,11 @@ class Modal extends React.Component {
           <ModalLeft position={this.props.modalState.position} decrease={this.props.decrease}></ModalLeft>
           <div className="content">
             <img src={this.props.modalState.photos[this.props.modalState.position]['url']}></img>
+            {/* caption */}
+            <div className="caption">{this.props.modalState.photos[this.props.modalState.position]['caption']}</div>
           </div>
           <ModalRight position={this.props.modalState.position} increase={this.props.increase}></ModalRight>
         </div>
-        {/* caption */}
-        <div>{this.props.modalState.photos[this.props.modalState.position]['caption']}</div>
         <button onClick={this.props.closeModal}>Close</button>
       </div>,
       document.getElementById('modal-root')
