@@ -14,8 +14,6 @@ img {
   overflow: hidden;
 }
 
-
-
 .modal {
   flex-direction: column;
   background-color: rgba(0,0,0,0.5);
@@ -46,6 +44,15 @@ img {
   width: 400px;
   height: 300px;
   justify-content: center;
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  bottom: 16%;
+  text-align: center;
 }
 
 .thumbnail {
