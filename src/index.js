@@ -1,24 +1,22 @@
-import './style.scss';
-import Dog from './dog.jpg';
-import Hen from './hen.svg';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import './styles.scss';
+import App from './Components/App.jsx';
 
-function component() {
-  const element = document.createElement('div');
+const component = (type, id) => {
+  const element = document.createElement(type);
+  element.id = id;
+  return element
+}
 
-  element.classList.add('hello');
-  element.innerHTML = 'Hello webpack';
-
-  const myDog = new Image();
-  myDog.src = Dog;
-  element.appendChild(myDog);
-
-  // const myHen = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  // element.appendChild(myHen);
-  const myHen = new Image();
-  myHen.src = Hen;
-  element.appendChild(myHen);
-
+const script = () => {
+  const element = document.createElement('script');
+  element.src = "https://kit.fontawesome.com/2db4db150c.js"
   return element;
 }
 
-document.body.appendChild(component());
+document.head.appendChild(script());
+document.body.appendChild(component('div', 'app'));
+document.body.appendChild(component('div', 'modal-root'));
+
+ReactDOM.render(<App />, document.getElementById('app'));

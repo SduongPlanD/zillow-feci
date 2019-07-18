@@ -1,0 +1,56 @@
+#modal-root {
+  position: relative;
+  z-index: 999;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.app {
+  height: 10em;
+  width: 10em;
+  background: lightblue;
+  overflow: hidden;
+}
+
+
+
+.modal {
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentCont {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.photoPosition {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 5px;
+}
+.content {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+}
+
+.thumbnail {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
